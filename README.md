@@ -1,4 +1,6 @@
-# Starter project Project :rocket: :zap: :fire: ![Twitter Follow](https://img.shields.io/twitter/follow/hamzahsn?color=aqua&style=for-the-badge)
+# Starter project Project :rocket: :zap: :fire:
+
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/hamzahsn.svg?style=for-the-badge&label=Follow%20%40Hamzahsn&color=aqua)](https://twitter.com/hamza_hsn)
 
 ## Description
 
