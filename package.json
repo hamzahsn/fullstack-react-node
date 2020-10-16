@@ -1,0 +1,36 @@
+{
+  "name": "typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "Full-stack sample application build with webpack, React, NodeJs, Typescript and MongoDB",
+  "main": "index.js",
+  "private": true,
+  "engines": {
+    "node": "12.18.3"
+  },
+  "scripts": {
+  },
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/hamzahsn/fullstack-react-node.git"
+  },
+    "keywords": [
+    "typescript",
+    "react",
+    "webpack",
+    "fullstack",
+    "express",
+    "node",
+    "mongodb"
+  ],
+  "author": {
+    "name": "Hamza Amdouni", 
+    "email": "amdouni.hamza.hsn@gmail.com",
+    "url": "https://iamhamza.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hamzahsn/fullstack-react-node/issues",
+    "email": "amdouni.hamza.hsn@gmail.com"
+  },
+  "homepage": "https://github.com/hamzahsn/fullstack-react-node#readme"
+}
