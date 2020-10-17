@@ -8,6 +8,23 @@
     "node": "12.18.3"
   },
   "scripts": {
+    "format": "prettier --write src/**/*.ts{,x}",
+    "stylelint": "stylelint 'src/**/*.{css,scss}' --fix",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint-fix": "npm run lint -- --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{css.scss}": [
+      "npm run stylelint -- --fix"
+    ],
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --cache --fix && npm run format"
+    ]
   },
   "repository": {
     "type": "git",
@@ -98,6 +115,9 @@
     "postcss-loader": "^4.0.4",
     "prettier": "^2.1.2",
     "style-loader": "^2.0.0",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
     "ts-jest": "^26.4.1",
     "ts-node": "^9.0.0",
     "tsc-watch": "^4.2.9",
