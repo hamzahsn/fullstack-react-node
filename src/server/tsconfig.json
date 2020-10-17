@@ -15,8 +15,9 @@
     "moduleResolution": "node",
     "types": ["node"],
     "incremental": true,
-    "composite": true
+    "composite": true,
+    "rootDir": "./"
   },
   "include": ["**/*.ts"],
-  "exclude": ["**/*.test.ts"],
+  "exclude": ["**/*.test.ts", "src/app"]
 }

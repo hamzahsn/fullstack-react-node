@@ -16,8 +16,8 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "removeComments": false,
-    "rootDirs": ["."],
-    "baseUrl": ".",
+    "rootDir": "./",
+    "baseUrl": "./",
     "alwaysStrict": true,
     "noUnusedLocals": true,
     "importHelpers": true,
@@ -30,7 +30,5 @@
         "@assets/*": ["../../assets/*"],
 
     },
-  },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["**/*.test.ts", "**/*.test.tsx"],
+  }
 }
