@@ -1,0 +1,15 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "order/properties-order": [
+      ["composes"],
+      {
+        "unspecified": "bottomAlphabetical"
+      }
+    ],
+    "declaration-colon-newline-after": null,
+    "font-family-no-missing-generic-family-keyword": null,
+    "no-duplicate-selectors": null
+  }
+}
