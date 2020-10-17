@@ -1,0 +1,36 @@
+notifications:
+    email:
+        recipients:
+            - amdouni.hamza.hsn@gmail.com
+
+        on_success: change
+        on_failure: always
+
+language: node_js
+
+node_js:
+    - 12
+
+install:
+    - npm ci
+
+cache:
+    directories:
+        - ~/.npm
+        - ./node_modules
+        - ~/.cache
+    override:
+        - npm ci
+
+script:
+    - npm ci
+    - npm run format
+    - npm run build
+
+deploy:
+    provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    local_dir: build
+    on:
+        branch: master
