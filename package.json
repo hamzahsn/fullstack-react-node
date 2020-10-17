@@ -8,7 +8,7 @@
     "node": "12.18.3"
   },
   "scripts": {
-    "format": "prettier --write src/**/*.ts{,x}",
+    "format": "prettier --write src/**/*.{ts,tsx}",
     "stylelint": "stylelint 'src/**/*.{css,scss}' --fix",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "lint-fix": "npm run lint -- --fix"
@@ -23,7 +23,7 @@
       "npm run stylelint -- --fix"
     ],
     "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint --cache --fix && npm run format"
+      "eslint --cache --fix"
     ]
   },
   "repository": {
