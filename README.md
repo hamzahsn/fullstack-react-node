@@ -4,9 +4,9 @@
 [![Travis (.org)](https://img.shields.io/travis/hamzahsn/fullstack-react-node?style=for-the-badge)](https://travis-ci.org/hamzahsn/fullstack-react-node)
 [![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/hamzahsn/fullstack-react-node?style=for-the-badge)](https://snyk.io/test/github/{hamzahsn}/{fullstack-react-node})
 
-## Description
+## Introduction
 
-This is a starter project that use Typescript for React for client and Nodejs for server bundled with webpack and using Mongodb as a database
+[WIP] This is a starter project that use Typescript for React for client and Nodejs for server bundled with webpack and using Mongodb as a database, which simplify developer's life whom wants to developer a client/server project with these technologies and which also I'm trying to implement the best practices for both clients and server
 
 ## Quick start
 
@@ -34,3 +34,19 @@ After this, navigate to `http://localhost:3000/`. The app will automatically rel
 | `npm run uild-server`  |         build the server         |
 | `npm run dev-client`   |       Starting client side       |
 | `npm run dev-server`   |     Starting the server side     |
+
+## Why?
+
+## folder structure
+
+## What I used here
+
+## Contribution
+
+Found a bug or want to contribute? you can server yourself and open an issue before I give a clear instruction how to do it or how to open a PR here :wink:
+
+## How to use it
+
+## Like it?
+
+If you like this project then you can just :star: it
