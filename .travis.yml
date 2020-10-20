@@ -12,7 +12,7 @@ node_js:
     - 12
 
 install:
-    - npm ci
+    - npm i
 
 cache:
     directories:
@@ -20,17 +20,17 @@ cache:
         - ./node_modules
         - ~/.cache
     override:
-        - npm ci
+        - npm i
 
 script:
-    - npm ci
+    - npm i
     - npm run format
-    - npm run build
+    - npm run build-client
 
 deploy:
     provider: pages
     skip-cleanup: true
     github-token: $GITHUB_TOKEN
-    local_dir: build
+    local_dir: dist
     on:
         branch: master
