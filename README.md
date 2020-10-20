@@ -41,6 +41,10 @@ After this, navigate to `http://localhost:3000/`. The app will automatically rel
 
 ## What I used here
 
+## Deployment application
+
+This application is deployed by [github Pages](https://pages.github.com/), so you can see the live app on the following [Link](https://hamzahsn.github.io/fullstack-react-node/).
+
 ## Contribution
 
 Found a bug or want to contribute? you can server yourself and open an issue before I give a clear instruction how to do it or how to open a PR here :wink:
