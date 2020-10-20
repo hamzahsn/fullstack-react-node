@@ -1,8 +1,9 @@
 import * as webpack from 'webpack'
-import cssnano from 'cssnano'
-import dotenv from 'dotenv'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import path from 'path'
+import cssnano = require('cssnano')
+import dotenv = require('dotenv')
+import HtmlWebpackPlugin = require('html-webpack-plugin')
+import path = require('path')
+// import TerserPlugin from 'terser-webpack-plugin';
 
 const IS_DEV = process.env.NODE_ENV !== 'production'
 const WEBPACK_PORT = 3000
@@ -19,14 +20,16 @@ const config: webpack.Configuration = {
     entry: ['./src/client/index.tsx'],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[contenthash].bundle.js',
-        chunkFilename: '[name].[contenthash].bundle.js'
+        filename: 'js/[name].[contenthash].bundle.js',
+        chunkFilename: 'js/[name].[contenthash].bundle.js',
+        assetModuleFilename: 'images/[hash][ext][query]' // new in webpack 5
     },
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx']
     },
     optimization: {
         minimize: !IS_DEV,
+        // minimizer: [new TerserPlugin()],
         splitChunks: {
             cacheGroups: {
                 vendors: {
@@ -82,7 +85,8 @@ const config: webpack.Configuration = {
             },
             {
                 test: /.jpe?g$|.gif$|.png$|.svg$|.woff$|.woff2$|.ttf$|.eot$/,
-                use: 'url-loader?limit=10000'
+                // use: 'url-loader?limit=10000'
+                type: 'asset/resource' // webpack new asset/ressource for loading files instead of using loaders
             }
         ]
     },
