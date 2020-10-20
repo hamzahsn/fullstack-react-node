@@ -13,7 +13,11 @@
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "lint-fix": "npm run lint -- --fix",
     "build-client": "cross-env NODE_ENV=production webpack",
-    "dev-client": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" NODE_ENV=development webpack serve "
+    "build-server": "tsc -b src/server",
+    "dev-client": "cross-env TS_NODE_PROJECT=\"tsconfig.json\" NODE_ENV=development webpack serve",
+    "dev-server": "tsc-watch --noClear -b ./src/server/tsconfig.json --onSuccess \"node --enable-source-maps ./dist/server.js\"",
+    "dev": "concurrently --prefix \"[{name}]\" --names \"SERVER,CLIENT\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run dev-server\" \"npm run dev-client\"",
+    "build": "concurrently --prefix \"[{name}]\" --names \"SERVER,CLIENT\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run build-server\" \"npm run build-client\""
   },
   "husky": {
     "hooks": {
@@ -85,6 +89,7 @@
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.6",
+    "@types/terser-webpack-plugin": "^5.0.0",
     "@types/webpack": "^4.41.22",
     "@types/webpack-bundle-analyzer": "^3.8.0",
     "@types/webpack-dev-server": "^3.11.0",
@@ -119,6 +124,7 @@
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
+    "terser-webpack-plugin": "^5.0.0",
     "ts-jest": "^26.4.1",
     "ts-node": "^9.0.0",
     "tsc-watch": "^4.2.9",
