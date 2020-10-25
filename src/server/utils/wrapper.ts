@@ -6,7 +6,7 @@ type Handler = (req: Request, res: Response, next: NextFunction, error?: Error) 
 
 type Route = {
     path: string
-    method: string
+    method:  "get" | "post" | "put" | "patch" | "delete" | "head" | "options"
     handler: Handler | Handler[]
 }
 
@@ -18,7 +18,7 @@ export const applyMiddleware = (middleware: Wrapper[], router: Router) => {
 
 export const applyRoutes = (routes: Route[], router: Router) => {
     for (const route of routes) {
-        const { method, path, handler } = route
-        ;(router as any)[method](path, handler)
+        const { method, path, handler } = route;
+        router[method](path, handler)
     }
 }
